@@ -12,10 +12,12 @@ gulp.task('browserify', function() {
 gulp.task('copy', function() {
 	gulp.src('src/client/index.html')
 		.pipe(gulp.dest('build/client'));
+	gulp.src('src/server.js')
+		.pipe(gulp.dest('build'));
 });
 
 gulp.task('default', ['browserify', 'copy']);
 
 gulp.task('watch', function() {
-	gulp.watch('src/client/**/*.*', ['default']);
+	gulp.watch('src/**/*.*', ['default']);
 });

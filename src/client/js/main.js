@@ -1,3 +1,6 @@
-var React = require('react');
+/** @jsx React.DOM */
 
-React.render(<h1>Welcome to auction</h1>, document.getElementById('main'));
+var React = require('react');
+var AppRouter = require('./AppRouter.js');
+
+React.render(<AppRouter />, document.getElementById('main'));
